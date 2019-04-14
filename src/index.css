@@ -12,3 +12,171 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: #252525;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.center {
+  margin: auto;
+  width: 600px;
+}
+
+.nav {
+  max-width: 600px;
+  width: 600px;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li:first-child {
+  padding-left: 0;
+}
+
+.nav li:last-child {
+  padding-right: 0;
+  float: right;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.avatar {
+  height: 50px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.author-info {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.would-you-rather {
+  margin: 10px;
+  font-weight: bold;
+  color: darkblue
+}
+
+.username {
+  font-weight: bold;
+}
+
+.question-info {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+.question-container {
+  max-width: 600px;
+}
+
+.selected {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  background: lightgrey;
+}
+
+.unselected {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  background: lightgrey;
+}
+
+.selection {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.percent {
+  float: right;
+}
+
+.textarea {
+  border-radius: 4px;
+  border: 1px solid #dad7d7;
+  padding: 10px;
+  font-size: 15px;
+  height: 20px;
+  width: 400px;
+
+}
+
+new-question .btn {
+  text-transform: uppercase;
+  margin: 35px auto;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.29);
+  cursor: pointer;
+  background: #fff;
+  font-size: 16px;
+  width: 250px;
+  position: relative;
+}
+
+new-question .btn:hover {
+  border-color: rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+new-question .btn:focus {
+  outline: 0;
+  font-weight: 700;
+  border-width: 2px;
+}

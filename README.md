@@ -1,4 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is project 2 of Udacity React ND Program.
+
+## How to run
+
+1. Install dependencies
+
+```
+$ npm install
+```
+
+2. Start
+
+```
+yarn start
+```
 
 ## Available Scripts
 
