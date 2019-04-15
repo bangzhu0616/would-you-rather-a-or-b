@@ -7,8 +7,6 @@ class QuestionPage extends Component {
 
   handleSelect = (e, id, option) => {
     e.preventDefault()
-    console.log(option, id)
-    console.log(this.props.authedUser)
     const { dispatch, authedUser } = this.props
     dispatch(handleAnswerQuestion(id, option, authedUser))
   }
@@ -16,13 +14,12 @@ class QuestionPage extends Component {
   render() {
     const { authedUser } = this.props
     if (authedUser === undefined || authedUser === null) {
-      return <Redirect to='/login' />
+      return <Redirect to={{ pathname: '/login', state: { referrer: `/questions/${this.props.match.params.id}` }}} />
     }
 
     const { authedUserObj } = this.props
     const { id } = this.props.match.params
     const question = this.props.questions[id]
-    console.log(question)
     const { author, optionOne, optionTwo } = question
     const { name, avatarURL } = this.props.users[author]
     const answered = Object.keys(authedUserObj.answers).includes(id)

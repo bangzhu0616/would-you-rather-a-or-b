@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import { handleSetAuthedUser } from '../actions/authedUser'
 
 
@@ -32,9 +32,8 @@ class SignIn extends Component {
   render() {
     const { userIds, users } = this.props
     const { toHome } = this.state
-
     if (toHome === true) {
-      return <Redirect to='/' />
+      return <Redirect to={this.props.location.state ? this.props.location.state.referrer : '/'} />
     }
 
     return (

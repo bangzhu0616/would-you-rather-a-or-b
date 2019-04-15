@@ -9,7 +9,7 @@ class UserRanking extends Component {
     const { authedUser, rankings } = this.props
 
     if (authedUser === undefined || authedUser === null) {
-      return <Redirect to='/login' />
+      return <Redirect to={{ pathname: '/login', state: { referrer: '/leaderboard' }}} />
     }
     return (
       <div>
@@ -61,7 +61,7 @@ function mapStateToProps({ authedUser, questions, users }) {
     authedUser,
     questions,
     users,
-    rankings: rankings.sort((a, b) => b.score - a.score)
+    rankings: rankings.sort((a, b) => b.total_score - a.total_score)
   }
 }
 
