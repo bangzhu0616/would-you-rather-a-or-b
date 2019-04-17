@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Redirect } from 'react-router-dom'
 import { handleAnswerQuestion } from '../actions/questions'
+import NotFound from './NotFound'
 
 class QuestionPage extends Component {
 
@@ -20,6 +21,9 @@ class QuestionPage extends Component {
     const { authedUserObj } = this.props
     const { id } = this.props.match.params
     const question = this.props.questions[id]
+    if ( question === undefined || question === null ) {
+      return <NotFound />
+    }
     const { author, optionOne, optionTwo } = question
     const { name, avatarURL } = this.props.users[author]
     const answered = Object.keys(authedUserObj.answers).includes(id)

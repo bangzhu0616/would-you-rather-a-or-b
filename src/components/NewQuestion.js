@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
-import { Redirect } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 import { handleAddQuestion } from '../actions/questions'
 
 class NewQuestion extends Component {
@@ -44,7 +43,7 @@ class NewQuestion extends Component {
     const { authedUser } = this.props
 
     if (authedUser === undefined || authedUser === null) {
-      return <Redirect to='/login' />
+      return <Redirect to={{ pathname: '/login', state: { referrer: '/add' }}} />
     }
 
     const { optionOne, optionTwo, toPage } = this.state
